@@ -67,7 +67,7 @@ class TwoStackToQueue {
 
     //入队尾
     void push(int value) {
-        while (stackB != null) {
+        while (!stackB.empty()) {
             stackA.push(stackB.pop());
         }
         stackA.push(value);
@@ -75,7 +75,7 @@ class TwoStackToQueue {
 
     //出队头
     int pop() {
-        while (stackA != null) {
+        while (!stackA.empty()) {
             stackB.push(stackA.pop());
         }
         return stackB.pop();
@@ -88,7 +88,7 @@ class TwoStackToQueue {
 
     //返回队首元素
     int peek() {
-        while (stackA != null) {
+        while (!stackA.empty()) {
             stackB.push(stackA.pop());
         }
         return stackB.peek();
