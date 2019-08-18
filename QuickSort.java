@@ -22,7 +22,7 @@ public class QuickSort {
                 j--;
             }
             //从前完后找一个比基准值大的数
-            while (tmp >= array[i] && i > j) {
+            while (tmp >= array[i] && i <j){
                 i++;
             }
             //找到之后进行交换
