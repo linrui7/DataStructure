@@ -39,7 +39,7 @@ public class BinarySearch {
         int hight = arr.length - 1;
         while (low <= hight) {
             //找到中间部分,采用移位运算，增加效率
-            int middle = low + ((hight - low) >> 2);
+            int middle = low + ((hight - low) >> 1);
             if (value == arr[middle])
                 return middle;
             if (value > arr[middle])
@@ -62,7 +62,7 @@ public class BinarySearch {
         if (low > hight) {
             return -1;
         }
-        int middle = low + ((hight - low) >> 2);
+        int middle = low + ((hight - low) >> 1);
         if (value == arr[middle]) {
             return middle;
         }
